@@ -1,32 +1,32 @@
- var cantidad = 10;
+//  var cantidad = 10;
 
- function mostrarCantidad() {
-     var cantidad = 20;
-     console.log('adentro ', cantidad);
- }
+//  function mostrarCantidad() {
+//      var cantidad = 20;
+//      console.log('adentro ', cantidad);
+//  }
 
- console.log('afuera ', cantidad);
- mostrarCantidad();
- console.log('afuera ', cantidad);
-
-
- // cantidad = 10;
-
- // function mostrarCantidad() {
- //     cantidad = 20;
- //     console.log('adentro ', cantidad);
- // }
-
- // console.log('afuera ', cantidad)
- // mostrarCantidad();
- // console.log('afuera ', cantidad)
+//  console.log('afuera ', cantidad);
+//  mostrarCantidad();
+//  console.log('afuera ', cantidad);
 
 
- // function mostrarCantidad() {
- //     var cantidad = 20;
- //     console.log('adentro ', cantidad);
- // }
+// cantidad = 10;
 
- // console.log('afuera ', cantidad)
- // mostrarCantidad();
- // console.log('afuera ', cantidad)
+// function mostrarCantidad() {
+//     var cantidad = 20;
+//     console.log('adentro ', cantidad);
+// }
+
+// console.log('afuera ', cantidad)
+// mostrarCantidad();
+// console.log('afuera ', cantidad)
+
+
+function mostrarCantidad() {
+    var cantidad = 20;
+    console.log('adentro ', cantidad);
+}
+
+console.log('afuera ', cantidad)
+mostrarCantidad();
+console.log('afuera ', cantidad)

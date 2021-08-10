@@ -1,15 +1,15 @@
 // Función Tradicional 
-function total(precio, cantidad) {
-    console.log('El total es: ', precio * cantidad);
-}
+// function total(precio, cantidad) {
+//     console.log('El total es: ', precio * cantidad);
+// }
 
-total(10, 20);
-total(5, 1000);
+// total(10, 20);
+// total(5, 1000);
 
-//Función anónima
+// Función anónima
 // lista = [1, 2, 3]
-// listax2 = lista.map(function(e) {
-//     return e * 2
+// listax2 = lista.map(function(juancho) {
+//     return juancho * 2
 // })
 // console.log(listax2);
 
@@ -20,11 +20,11 @@ total(5, 1000);
 // listax2 = lista.map(multiplica)
 // console.log(listax2);
 
-//Función IIFE (se ejecutan ni bien se definen)
+// Función IIFE(se ejecutan ni bien se definen)
 // (function() {
 //     console.log('hola');
 // })();
 
-// (function(a, b) {
-//     console.log(a + b);
-// })(1, 2);
+(function(a, b) {
+    console.log(a + b);
+})(1, 2);

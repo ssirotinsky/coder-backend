@@ -13,3 +13,6 @@ class Perro {
 let maxi = new Perro('Maxi', 'Caniche', 3);
 console.log(maxi);
 maxi.ladrar();
+let pepe = new Perro('Pepe', 'Caniche', 3);
+console.log(pepe);
+pepe.ladrar();

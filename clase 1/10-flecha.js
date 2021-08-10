@@ -9,8 +9,8 @@
 //     return 'Vuelvo de SI flecha'
 // }
 
-// console.log(noFlecha());
-// console.log(siFlecha())
+// // console.log(noFlecha());
+// console.log(siFlecha());
 
 
 // Con Parámetros:
@@ -29,7 +29,8 @@
 
 
 
-// Si sólo ejecuta un return:
+// Si sólo ejecuta un
+// return :
 // function noFlecha(a, b) {
 //     return 'Vuelvo de NO flecha ' + a + b;
 // }
@@ -39,17 +40,17 @@
 // console.log(noFlecha(1, 2));
 // console.log(siFlecha(1, 2));
 
-//Ejemplo práctico:
+// Ejemplo práctico:
 // lista = [1, 2, 3, 4, 5, 6]
 // console.log(lista.filter(e => e > 2));
 
 //Uso de this:
-// function Probando() {
-//     this.prueba = 50;
-//     setTimeout(function() {
-//             console.log(this);
-//         })
-//         setTimeout(() => console.log(this), 1000);
-// }
-// prueba = 10;
-// var prueba = new Probando();
+function Probando() {
+    this.prueba = 50;
+    setTimeout(function() {
+        console.log(this);
+    })
+    setTimeout(() => console.log(this), 1000);
+}
+prueba = 10;
+var prueba = new Probando();

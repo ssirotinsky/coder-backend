@@ -4,12 +4,12 @@ function creaFuncion() {
     function saludar() {
         console.log('Hola', nombre);
     }
-    saludar();
-    // return saludar;
+    //saludar();
+    return saludar;
 }
 
-creaFuncion();
-//console.log('Afuera: ', nombre);
+// creaFuncion();
+// console.log('Afuera: ', nombre);
 
-//miFuncion = creaFuncion();
+creaFuncion();
 //miFuncion();

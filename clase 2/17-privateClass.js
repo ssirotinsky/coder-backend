@@ -9,11 +9,11 @@ class Persona {
     }
 
     getCliente(){
-	return this.#cliente;
+	    return this.#cliente;
     }
 
     setCliente(cliente){
-	this.#cliente = cliente;
+	    this.#cliente = cliente;
     }
 
 }
@@ -21,9 +21,9 @@ class Persona {
 let pedro = new Persona("pedro", 25);
 console.log(pedro);
 pedro.edad++;
-//pedro.#cliente = false;
-console.log(pedro);
-//console.log(pedro.getCliente());
-//pedro.setCliente(false);
-//console.log(pedro.getCliente());
+// pedro.#cliente = false;
+// console.log(pedro.#cliente);
+console.log(pedro.getCliente());
+pedro.setCliente(false);
+console.log(pedro.getCliente());
 

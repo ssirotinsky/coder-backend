@@ -8,7 +8,7 @@ const miLista = [
 ];
 
 console.log(miLista);
-// console.log(miLista.flat());
-// console.log(miLista.flat(1));
-// console.log(miLista.flat(2));
-// console.log(miLista.flat(3));
+console.log(miLista.flat());
+console.log(miLista.flat(1));
+console.log(miLista.flat(2));
+console.log(miLista.flat(3));

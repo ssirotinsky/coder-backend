@@ -6,5 +6,6 @@ let miEquipo = {
     esGrande: true
 }
 
-// console.log(Object.entries(miEquipo));
-// console.log(Object.fromEntries(Object.entries(miEquipo)));
+console.log(Object.entries(miEquipo));
+let prueba = ['hola','chau'];
+console.log(Object.fromEntries(prueba));

@@ -1,6 +1,6 @@
 let operaciones = ['6**2', '**', '3**3', '4**', '4**5', '8**2**', '4*=5'];
 
-let resultado = (e) => {
+const resultado = (e) => {
     let dividido = e.split('');
     if (dividido.includes('*', 1) && dividido.includes('*', 2)) {
         if (dividido.length == 4) {

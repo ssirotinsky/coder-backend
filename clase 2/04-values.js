@@ -8,4 +8,4 @@ let miEquipo = {
 
 // console.log(Object.values(miEquipo));
 // console.log(Object.values(miEquipo).filter(e => typeof e == 'string'));
-// console.log(Object.entries(miEquipo));
+console.log(Object.entries(miEquipo));

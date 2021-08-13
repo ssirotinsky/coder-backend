@@ -2,7 +2,7 @@
 let cliente = {
     nombres: 'Ariel Arnaldo',
     apellido: 'Ortega',
-    edad: 56,
+    edad: 47,
     goles: 140
 };
 // let { nombres, edad, goles, noexiste } = cliente;
@@ -11,14 +11,14 @@ let cliente = {
 //edad = cliente.edad
 //goles = cliente.goles
 
-//Propiedades rest:
-// let { nombres, apellido, ...info } = cliente;
-// console.log(nombres, apellido, info);
+// Propiedades rest:
+// let { apellido, ...info } = cliente;
+// console.log( info);
 
 //Propiedades spread:
-// let nuevoCliente = {
-//     ...cliente,
-//     club: 'River Plate',
-//     esIdolo: true
-// };
-// console.log(nuevoCliente);
+let nuevoCliente = {
+    ...cliente,
+    club: 'River Plate',
+    esIdolo: true
+};
+console.log(nuevoCliente);

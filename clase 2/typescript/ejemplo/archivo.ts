@@ -1,4 +1,4 @@
-const miBool: Boolean = true;
+const miBool: Boolean = 'hola que tal';
 
 let miNumero: Number = 10;
 

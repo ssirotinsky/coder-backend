@@ -6,6 +6,7 @@ const multiplicacion = (num1, num2) => num1 * num2;
 const division = (num1, num2) => num1 / num2;
 const modulo = (num1, num2) => num1 % num2;
 
+console.log(suma);
 console.log(operacion(3,5,suma));
 console.log(operacion(9,5,resta));
 console.log(operacion(2,9,multiplicacion));

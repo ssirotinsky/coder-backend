@@ -3,9 +3,8 @@
 //     miFuncion();
 // }
 
-// // const soloSaludo = () => console.log('Sólo saludo');
-// // hagoAlgo(soloSaludo);
-
+// const soloSaludo = () => console.log('Sólo saludo');
+// hagoAlgo(soloSaludo);
 // hagoAlgo(() => console.log('Sólo saludo'));
 
 
@@ -15,5 +14,5 @@ const hagoAlgo = (miFuncion, param) => {
 }
 
 const saludoPersona = (nombre) => console.log(`Hola ${nombre}!`);
-// saludoPersona('Juan');
+// // saludoPersona('Juan');
 hagoAlgo(saludoPersona, 'Pedro');

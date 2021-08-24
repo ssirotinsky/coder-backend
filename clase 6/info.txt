@@ -1,0 +1,15 @@
+{
+	"contenidoStr": "{\n  \"name\": \"clase-6\",\n  \"version\": \"1.0.0\",\n  \"description\": \"\",\n  \"main\": \"01-readsync.js\",\n  \"scripts\": {\n    \"test\": \"echo \\\"Error: no test specified\\\" && exit 1\"\n  },\n  \"author\": \"\",\n  \"license\": \"ISC\"\n}\n",
+	"contenidoObj": {
+		"name": "clase-6",
+		"version": "1.0.0",
+		"description": "",
+		"main": "01-readsync.js",
+		"scripts": {
+			"test": "echo \"Error: no test specified\" && exit 1"
+		},
+		"author": "",
+		"license": "ISC"
+	},
+	"size": 209
+}

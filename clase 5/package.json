@@ -1,14 +1,23 @@
 {
   "name": "clase-5",
   "version": "1.0.0",
-  "description": "",
+  "description": "prueba de nuevo paquete",
   "main": "01-nodemon.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "devDependencies": {
+    "nodemon": "^2.0.12"
   },
-  "author": "",
+  "scripts": {
+    "test": "echo \"Error: no test specified!!!\" && exit 1"
+  },
+  "keywords": [
+    "prueba",
+    "nodejs",
+    "npm",
+    "paquete"
+  ],
+  "author": "sirotinsky",
   "license": "ISC",
   "dependencies": {
-    "moment": "^2.29.1"
+    "moment": "~2.29.1"
   }
 }

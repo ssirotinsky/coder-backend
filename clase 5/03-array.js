@@ -3,8 +3,8 @@ let productos = [
     { id: 2, nombre: 'Calculadora', precio: 234.56 }, 
     { id: 3, nombre: 'Globo Terráqueo', precio: 45.67 }, 
     { id: 4, nombre: 'Paleta Pintura', precio: 456.78 }, 
-    { id: 5, nombre: 'Reloj', precio: 67.89 }, 
-    { id: 6, nombre: 'Agenda', precio: 78.90 } 
+    { id: 5, nombre: 'Reloj', precio: 1167.89 }, 
+    { id: 6, nombre: 'Agenda', precio: 8.90 } 
 ];
 
 let nombres = productos.map(e=>e.nombre).join(',');

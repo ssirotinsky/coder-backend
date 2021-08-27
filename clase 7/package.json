@@ -1,0 +1,18 @@
+{
+  "name": "clase-7",
+  "version": "1.0.0",
+  "description": "",
+  "main": "01-edad.js",
+  "dependencies": {
+    "express": "^4.17.1",
+    "moment": "~2.29.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.12"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}

@@ -12,13 +12,14 @@ server.on('error', error=>console.log('Error en servidor', error));
 app.get('/api/mensajes', (req,res)=>{
     console.log('get request con query parameters a api/mensajes recibido');
     let query = req.query;
-    let cantidad = Object.entries(req.query).length; 
+    let cantidad = Object.entries(query).length; 
+    console.log(Object.entries(query));
     console.log(query);
     if (cantidad > 0) {
         const objRes = {
             msg: 'Hola Mundo con query parameters!',
             parametros: cantidad,
-            query: query,
+            query,
             error: false
         };
         res.json(objRes);

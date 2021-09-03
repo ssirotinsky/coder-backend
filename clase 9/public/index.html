@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Mi página estática</title>
+</head>
+<body>
+ 
+    <h1>Bienvenidos a mi página estática</h1>
+ 
+    <form method="post" action="/personas/guardar" style="margin:20px;">
+        <fieldset>
+            <legend>Datos de la Persona</legend>
+            Nombre:<input name="nombre" type="text">
+            Apellido:<input name="apellido" type="text">
+            Edad<input name="edad" type="number">
+        </fieldset>    
+        <input type="submit" value="Grabar Persona">
+    </form>
+
+    <hr>
+
+    <form method="post" action="/mascotas/guardar" style="margin:20px;">
+        <fieldset>
+            <legend>Datos de la Mascota</legend>
+            Nombre:<input name="nombre" type="text">
+            Raza:<input name="raza" type="text">
+            Edad<input name="edad" type="number">
+        </fieldset>    
+        <input type="submit" value="Grabar Mascota">
+    </form>
+
+</body>
+</html>

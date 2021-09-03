@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Probando Multer</title>
+</head>
+<body>
+    <h1>Bienvenidos a la prueba de Multer</h1>
+    <form action="uploadfile" enctype="multipart/form-data" method="POST">
+        Seleccione archivo<input type="file" name="myFile">
+        <input type="submit" value="Subir archivo">
+    </form>
+    <form action="uploadmultiple" enctype="multipart/form-data" method="POST">
+        Seleccione archivos<input type="file" name="myFiles" multiple>
+        <input type="submit" value="Subir archivos">
+    </form>
+</body>
+</html>

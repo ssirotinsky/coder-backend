@@ -1,0 +1,5 @@
+<h1>Nueva Info...</h1>
+<h2> Datos importantes: </h2> 
+<p> Nombre: #!nombre#! </p>
+<p> Apellido: #!apellido#! </p>
+<p> Fecha y Hora: #!fechahora#! </p>

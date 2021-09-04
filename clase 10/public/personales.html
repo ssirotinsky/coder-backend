@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Probando Handlebars...</title>
+</head>
+
+<body>
+    <span></span>
+    <!-- Para inyectar el resultado-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.7/handlebars.min.js"></script>
+    <script>
+        const template = Handlebars.compile(` 
+            <h1>Datos Personales</h1>
+            <ul>
+                <li>{{nombre}}</li>
+                <li>{{apellido}}</li>
+                <li>{{edad}}</li>
+                <li>{{mail}}</li>
+                <li>{{telefono}}</li>
+            </ul>
+        `);
+        const html = template({
+            nombre: "Sergio",
+            apellido: "Sirotinsky",
+            edad: 44,
+            mail: "sergio.sirotinsky@bbva.com",
+            telefono: "1145283867"
+        });
+        document.querySelector('span').innerHTML = html;
+    </script>
+</body>
+
+</html>

@@ -13,9 +13,15 @@
     <!-- Para inyectar el resultado-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.7/handlebars.min.js"></script>
     <script>
-        const template = Handlebars.compile("<h1>Bienvenido {{nombre}}!<h1>");
+        const hola = "juan";
+        const template = Handlebars.compile(`
+            <h1>Bienvenido {{nombre}} - {{apellido}}!<h1>
+            <h2> Lista de {{datos}} ${hola}</h2>
+        `);
         const html = template({
-            nombre: "Sergio"
+            nombre: "Mario",
+            apellido: "Perez",
+            datos: "empleados"
         });
         document.querySelector('span').innerHTML = html;
     </script>

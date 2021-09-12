@@ -1,0 +1,15 @@
+html 
+    head
+        title="Mi página con un componente de barra de progreso" 
+    body
+        h1(
+            style={color: 'blue'}
+        ) !{titulo}
+        span=min
+        meter(
+            min=min
+            max=max
+            value=nivel
+            style={'margin-left': '10px', 'margin-right': '10px', width: '200px'}
+        )
+        span=max

@@ -9,19 +9,19 @@
 </head>
 
 <body>
-    <span></span>
+    <h1>Datos Personales</h1>
+    <ul>
+        <span></span>
+    </ul>
     <!-- Para inyectar el resultado-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.7/handlebars.min.js"></script>
     <script>
-        const template = Handlebars.compile(` 
-            <h1>Datos Personales</h1>
-            <ul>
+        const template = Handlebars.compile(`
                 <li>{{nombre}}</li>
                 <li>{{apellido}}</li>
                 <li>{{edad}}</li>
                 <li>{{mail}}</li>
                 <li>{{telefono}}</li>
-            </ul>
         `);
         const html = template({
             nombre: "Sergio",

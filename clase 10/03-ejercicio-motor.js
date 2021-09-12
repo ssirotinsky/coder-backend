@@ -35,7 +35,8 @@ app.get('/', function(req, res) {
         titulo: 'Bienvenidos a mi sitio',
         mensaje: 'Los saludo desde el motor de plantillas',
         autor: 'Sergio Sirotinsky',
-        version: '0.0.1'
+        version: '0.0.1',
+        nombre: 'pinino más'
     }
     res.render('plantilla1', datos);
 });

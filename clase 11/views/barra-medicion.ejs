@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Mi componente de medición con EJS</title>
+</head>
+
+<body>
+    <h1 style="color: blue">
+        <%- titulo %>
+    </h1>
+    <%=min%>
+        <meter style="margin-left: 10px; margin-right: 10px; width: 300px" min="<%=min%>" max="<%=max%>" value="<%=nivel%>">
+        </meter>
+        <%=max%>
+</body>
+
+</html>

@@ -21,3 +21,4 @@ app.get('/datos', (req, res) => {
     let { min, nivel, max, titulo } = req.query;
     res.render('barra-medicion.pug', { min, nivel, max, titulo });
 });
+//?min=10&nivel=15&max=20&titulo=<i>Medidor</i>

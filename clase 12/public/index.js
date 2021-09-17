@@ -1,15 +1,25 @@
 const socket = io();
 
-socket.on('mi mensaje', (data) => {
-    alert(data);
-    socket.emit('notificacion', 'mensaje recibido exitosamente');
-});
+socket.on('atodos', (data) => {
+    let ul = document.getElementsByTagName('ul')[0];
+    ul.innerHTML = '';
+    for (mensaje of data) {
+        let ul = document.getElementsByTagName('ul')[0];
+        let li = document.createElement('li');
+        ul.appendChild(li);
+        li.innerHTML = `SocketId: ${mensaje.socketId} - Mensaje: ${mensaje.mensaje}`;
+    }
+})
 
-socket.on('mensajes', (data) => {
-    console.log('recibiendo mensajes!', data);
-});
+socket.on('devuelvo', (data) => {
+    let p = document.getElementsByTagName('p')[0];
+    p.innerHTML = data;
+})
 
+function enviar() {
+    socket.emit('notificacion', document.getElementsByTagName('input')[0].value);
+};
 
-function enviarMensaje() {
-    socket.emit('mensaje', 'los saludo desde la página!');
+function cambio(valor) {
+    socket.emit('mitexto', valor);
 }

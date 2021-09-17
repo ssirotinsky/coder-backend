@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Mi plantilla de ingreso de datos</title>
+</head>
+
+<body>
+    <h1 style="color: blue">Ingrese Datos</h1>
+    <form method="post" action="/personas">
+        Nombre: <input type="text" name="nombre"> Apellido: <input type="text" name="apellido"> Edad: <input type="number" name="edad">
+        <input type="submit" value="Guardar">
+    </form>
+    <form method="POST" action="/personas/limpiar">
+        <input type="submit" value="Limpiar">
+    </form>
+    <h2 style="color: red">Historial</h2>
+    <table>
+        <th>
+            <td>Nombre</td>
+            <td>Apellido</td>
+            <td>Edad</td>
+        </th>
+        <% personas.forEach(function(persona) { %>
+            <tr>
+                <td>
+                    <%= persona.nombre %>
+                </td>
+                <td>
+                    <%= persona.apellido %>
+                </td>
+                <td>
+                    <%= persona.edad %>
+                </td>
+            </tr>
+            <% }); %>
+    </table>
+    <%if (personas.length == 0) { %>
+        <h2> No existe información</h2>
+        <%} %>
+
+</body>
+
+</html>

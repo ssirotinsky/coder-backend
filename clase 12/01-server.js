@@ -11,7 +11,6 @@ const mensajes = [];
 
 app.use(express.static('./public'));
 
-
 httpServer.listen(PORT, () => {
     console.log('Servidor HTTP escuchando en el puerto', PORT);
 });
@@ -20,7 +19,7 @@ io.on('connection', (socket) => {
 
     console.log('Usuario conectado');
 
-    socket.emit('mi mensaje', 'Este es mi mensaje desde el servidor');
+    socket.emit('mi mensaje', 'Este HOLA es mi mensaje desde el servidor');
 
     socket.on('notificacion', (data) => {
         console.log(data);

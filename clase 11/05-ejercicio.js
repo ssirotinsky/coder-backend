@@ -2,7 +2,9 @@ const express = require('express');
 
 const app = express();
 const PORT = 8080;
+let personas = [];
 
+app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 app.set('view engine', 'ejs');
@@ -13,11 +15,19 @@ const server = app.listen(PORT, () => {
 server.on('error', error => console.log('Error en servidor', error));
 
 app.get('/prueba', (req, res) => {
-    res.send('probando!');
+    res.send('probandoss');
 });
 
-app.get('/datos', (req, res) => {
-    let { min, nivel, max, titulo } = req.query;
-    res.render('barra-medicion', { min, nivel, max, titulo });
+app.post('/personas', (req, res) => {
+    personas.push(req.body);
+    res.json({ persona: req.body, err: '' })
 });
-//?min=10&nivel=15&max=20&titulo=<i>Medidor</i>
+
+app.post('/personas/limpiar', (req, res) => {
+    personas = [];
+    res.json({ err: '' })
+});
+
+app.get('/personas', (req, res) => {
+    res.render('personas', { personas });
+});

@@ -22,10 +22,10 @@ app.get('/', (req, res) => {
         { name: 'Tux', organization: 'Linux', birth_year: 1996 },
         { name: 'Moby Dock', organization: 'Docker', birth_year: 2013 }
     ];
-    let tagline = 'No programming concept is complete without a cute animal mascot';
+    let tagline = 'SiroNo programming concept is complete without a cute animal mascot';
     res.render('pages/index', { mascots, tagline });
 });
 
 app.get('/about', (req, res) => {
-    res.render('pages/about', { about: 'Prueba EJS' });
+    res.render('pages/about', { about: 'Prueba EJS!!!!' });
 });

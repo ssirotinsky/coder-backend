@@ -16,6 +16,6 @@ app.get('/prueba', (req, res) => {
     res.send('probando');
 });
 
-app.get('/saludo', (req, res) => {
-    res.render('hello.pug', { mensaje: 'Bienvenidos a mi sitio!' });
+app.get('/hello', (req, res) => {
+    res.render('hello.pug', { mensaje: 'Bienvenidos a mi sitio!!!!' });
 });

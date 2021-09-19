@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/estilos.css">
+    <script src="./socket.io/socket.io.js"></script>
+    <title>Mi App de Paint Colaborativo</title>
+</head>
+<body class="subbg-color">
+    <div class="container-fluid">
+        <h1> <span class="mensaje-cyan">Websocket</span><span class="mensaje-yellow"> Paint</span></h1>
+        <div>Address <span id="address"></span></div>
+        <div id="information">Bienvenidos!</div>
+        <div class="row my-3">
+            <div class="col-3">
+                <h4>Negro<input id="blackcheck" name="color" type="radio" checked></h4>
+            </div>
+            <div class="col-3">
+                <h4>Negro<input id="blackCheck" name="color" type="radio" checked></h4>
+            </div>
+            <div class="col-3">
+                <h4>Azul<input id="blueCheck" name="color" type="radio" checked></h4>
+            </div>
+            <div class="col-3">
+                <h4>Rojo<input id="redCheck" name="color" type="radio" checked></h4>
+            </div>
+            <div class="col-3">
+                <h4>Verde<input id="greenCheck" name="color" type="radio" checked></h4>
+            </div>
+        </div>
+        <div class="my-3">
+            <canvas class="canvas-color" id="playingfield"
+                    onmousedown="onMouseDown(event)" 
+                    onmousemove="onMouseMove(event)" 
+                    onmouseout="onMouseOut(event)" 
+                    onmouseup="onMouseUp(event)"
+                    width="1280" height="768">
+            </canvas>
+        </div>
+    </div>
+    <script src="./js/main.js"></script>
+</body>
+</html>

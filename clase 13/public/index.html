@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>App de Chat Coder</title>
+    <script src="./socket.io/socket.io.js"></script>
+    <script src="./main.js"></script>
+</head>
+<body>
+    <h1>Chat en línea</h1>
+    <div id="mensajes"></div>
+    <br>
+    <form onsubmit="return enviarMensaje(this)">
+        <input type="text" id="usuario" placeholder="Su nombre...">
+        <input type="text" id="texto" placeholder="Su mensaje...">
+        <input type="submit" value="Enviar">
+    </form>
+</body>
+</html>

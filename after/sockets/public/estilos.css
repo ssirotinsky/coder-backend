@@ -1,0 +1,57 @@
+#noticia {
+    background-color: lightblue;
+    font-size: large;
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+    width: 300px;
+    margin-left: 150px;
+    display: none;
+}
+
+#partidos {
+    font-size:x-large;
+    border-radius: 30px;
+    margin: 20px;
+    width: 600px;
+    background-color: #d8d8d8;
+}
+
+.fila {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    padding: 10px;
+}
+
+.goles {
+    width: 80px;
+    text-align: center;
+    margin: 5px;
+}
+
+.equipo {
+    width: 200px;
+    text-align: center;
+    margin: 5px;
+}
+
+.vs {
+    width: 30px;
+    text-align: center;
+    margin: 5px;
+}
+
+.mas, .menos {
+    width: 20px;
+    margin: 5px;
+    background-color: gray;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.mas:hover, .menos:hover {
+    cursor: pointer;
+    background-color:blue;
+}
+

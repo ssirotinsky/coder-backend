@@ -44,7 +44,7 @@ window.addEventListener("load", ()=>{
 socket.on('info', (data) => {
     document.getElementById("information").innerHTML = data;
 });
-
+ 
 socket.on('rect', (data) => {
     document.getElementById("information").innerHTML = `x: ${data.x} - y: ${data.y}`;
     ctx.fillStyle = `rgb(${data.r}, ${data.g}, ${data.b})`;

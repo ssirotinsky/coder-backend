@@ -1,6 +1,6 @@
 import * as operaciones from './lib/operaciones'
 
-const mensaje:string = 'Hola typescript!'
+const mensaje:string = 'Hola typescript!!!'
 console.log(mensaje);
 
 let num1:number = 10, num2:number = 4

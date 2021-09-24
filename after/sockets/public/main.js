@@ -20,7 +20,6 @@ let render = (data) => {
 socket.on('gol', (data) => {
     let noticia = document.getElementById('noticia'); 
     noticia.style.display = 'block';
-    console.log('aaa');
     noticia.innerHTML = `Gol de ${data.equipo}!!!`
     setTimeout(()=>noticia.style.display='none',1000); 
 })

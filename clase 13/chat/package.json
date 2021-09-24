@@ -1,17 +1,17 @@
 {
-  "name": "ts2",
+  "name": "chat",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": ".\\node_modules\\.bin\\tsc",
-    "watch": ".\\node_modules\\.bin\\tsc -w",
-    "start": "nodemon ./dist/index.js",
+    "start": "nodemon server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "SS",
+  "keywords": [],
+  "author": "",
   "license": "ISC",
   "dependencies": {
-    "typescript": "^4.4.3"
+    "express": "^4.17.1",
+    "socket.io": "^4.2.0"
   }
 }

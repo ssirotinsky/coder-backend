@@ -4,7 +4,7 @@ var operaciones = require("./lib/operaciones");
 var mensaje = 'Hola typescript!';
 console.log(mensaje);
 var num1 = 10, num2 = 4;
-console.log("La suma de " + num1 + " + " + num2 + " es " + operaciones.sumar(num1, num2));
+console.log("La sumaaaaa de " + num1 + " + " + num2 + " es " + operaciones.sumar(num1, num2));
 console.log("La resta de " + num1 + " - " + num2 + " es " + operaciones.restar(num1, num2));
 console.log("La multiplicaci\u00F3n de " + num1 + " * " + num2 + " es " + operaciones.multiplicar(num1, num2));
 console.log("La divisi\u00F3n de " + num1 + " / " + num2 + " es " + operaciones.dividir(num1, num2));

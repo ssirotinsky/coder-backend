@@ -21,7 +21,7 @@ let partidos = [
 io.on('connection', (socket) => {
     
     console.log('Cliente conectado!');
-    
+
     socket.emit('partidos', partidos);
 
     socket.on('suma-gol', (data) => {

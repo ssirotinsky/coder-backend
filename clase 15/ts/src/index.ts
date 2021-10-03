@@ -14,5 +14,5 @@ app.get('/',(req,res)=>{
 
 const PORT:number = 8080;
 app.listen(PORT, () => {
-    console.log(`Servidor express TypeScript/WebPack escuchando en el puerto ${PORT}`)
+    console.log(`Servidor expressss TypeScript/WebPack escuchando en el puerto ${PORT}`)
 });

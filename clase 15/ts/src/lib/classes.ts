@@ -9,6 +9,6 @@ export class Persona {
     }
 
     getFullName():string {
-        return `${this.fname} ${this.lname}`;
+        return `${this.fname} '-' ${this.lname}`;
     }
 }

@@ -1,7 +1,7 @@
 const {options} = require('./options/SQLite3');
 const knex = require('knex')(options);
 
-const articulos = [
+const articulosA = [
     {nombre: 'Celular', codigo: 'CELU', precio: 12499.99, stock: 5000},
     {nombre: 'Televisión', codigo: 'TV', precio: 27999.99, stock: 300},
     {nombre: 'Notebook', codigo: 'NOTE', precio: 48200.12, stock: 1500},
@@ -10,53 +10,46 @@ const articulos = [
 ];
 
 
-knex.schema.dropTableIfExists('articulos')
-.then(()=>console.log('Tabla borrada...'))
-.catch(e=>{
-    console.log('Error en drop:', e);
-    knex.destroy();
-    process.exit(500);
-});
+(async ()=>{
+    try {
+        await knex.schema.dropTableIfExists('articulos');
+        console.log('Tabla borrada...');
 
-knex.schema.createTable('articulos', table => {
-    table.increments('id'),
-    table.string('nombre'),
-    table.string('codigo'),
-    table.float('precio'),
-    table.integer('stock')
-})
-.then(()=>{
-    console.log('Tabla de articulos creada...');
-    return knex('articulos').insert(articulos);
-})
-.then(()=>{
-    console.log('Articulos insertados...');
-    return knex.from('articulos').select('*');
-})
-.then((articulos)=>{
-    console.log('Listando articulos...');
-    for (let articulo of articulos) {
-        console.log(`${articulo['id']}. ${articulo['codigo']} - ${articulo['nombre']}. Precio: $${articulo['precio']} - Stock: ${articulo['stock']}`);
+        await knex.schema.createTable('articulos', table => {
+                table.increments('id'),
+                table.string('nombre'),
+                table.string('codigo'),
+                table.float('precio'),
+                table.integer('stock')
+            });
+        console.log('Tabla de articulos creada...');
+
+        await knex('articulos').insert(articulosA);
+        console.log('Articulos insertados...');
+
+        let articulos = await knex.from('articulos').select('*');
+        console.log('Listando articulos...');
+        for (let articulo of articulos) {
+            console.log(`${articulo['id']}. ${articulo['codigo']} - ${articulo['nombre']}. Precio: $${articulo['precio']} - Stock: ${articulo['stock']}`);
+        }
+
+        await knex.from('articulos').where('id', '=', 3).del();
+        console.log('Articulo borrado...');
+
+        await knex.from('articulos').where('id', '=', 2).update({stock: 0});
+        console.log('Articulo actualizado...');
+
+        articulos = await knex.from('articulos').select('*');
+        console.log('Listando articulos finales...');
+        for (let articulo of articulos) {
+            console.log(`${articulo['id']}. ${articulo['codigo']} - ${articulo['nombre']}. Precio: $${articulo['precio']} - Stock: ${articulo['stock']}`);
+        }
+        knex.destroy();
     }
-    return knex.from('articulos').where('id', '=', 3).del();
-})
-.then(()=>{
-    console.log('Articulo borrado...');
-    return knex.from('articulos').where('id', '=', 2).update({stock: 0});
-})
-.then(()=>{
-    console.log('Articulo actualizado...');
-    return knex.from('articulos').select('*');
-})
-.then((articulos)=>{
-    console.log('Listando articulos finales...');
-    for (let articulo of articulos) {
-        console.log(`${articulo['id']}. ${articulo['codigo']} - ${articulo['nombre']}. Precio: $${articulo['precio']} - Stock: ${articulo['stock']}`);
+
+    catch(e) {
+        console.log('Error en proceso:', e);
+        knex.destroy();
     }
-    knex.destroy();
-})
-.catch(e=>{
-    console.log('Error en proceso:', e);
-    knex.destroy();
-});
+})();
 

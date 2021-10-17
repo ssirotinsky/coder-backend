@@ -46,10 +46,10 @@ function CRUD(){
     // .then(()=>Estudiante.aggregate([ { $match: {nota: {$exists: 1}}} ]))
     .then(notas=>{
         console.log('Promedio de notas del total:');
-        console.log(notas[0].promedio);
+        console.log(notas[0]);
     })
     .then(()=>Estudiante.aggregate([ { $match: {curso: '1A'}} , { $group: { _id: null, promedio: { $avg: '$nota' }}} ]))
-    // .then(()=>Estudiante.aggregate([ { $match: {nota: {$exists: 1}}} ]))
+    // .then(()=>Estudiante.aggregate([  { $match: {curso: '1A'}}]))
     .then(notas=>{
         console.log('Promedio de notas del curso 1A:');
         console.log(notas[0].promedio);

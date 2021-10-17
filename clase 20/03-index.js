@@ -15,7 +15,7 @@ async function CRUD (){
             })    
         console.log('Conectado a la base de datos...');
 
-        await Estudiante.updateOne({nombre: 'Lucas', apellido: 'Blanco'}, {$set: {dni: '20355875'}});
+        await Estudiante.updateOne({nombre: 'Lucas', apellido: 'Blanco'},  {dni: '333'});
         console.log('DNI actualizado...');
 
         await Estudiante.updateMany({}, {$set: {ingreso: false}});

@@ -1,0 +1,16 @@
+{
+  "type": "module",
+  "name": "clase-21",
+  "version": "1.0.0",
+  "description": "",
+  "main": "01-index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "firebase-admin": "^10.0.0",
+    "mongoose": "^6.0.11"
+  }
+}

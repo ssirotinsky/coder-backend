@@ -4,12 +4,12 @@ let {Estudiante} = require('./models/estudiantes');
 CRUD();
 
 function CRUD(){
-    const URI = 'mongodb://localhost:27017/colegio';
+    const URI = 'mongodb+srv://sergiosiro:123456@cluster0.8vpxz.mongodb.net/myFirstDatabase?retryWrites=true&w=majority';
     mongoose.connect(URI, 
         { 
           useNewUrlParser: true,
           useUnifiedTopology: true,
-          serverSelectionTimeoutMS: 1000
+          serverSelectionTimeoutMS: 5000
         }, 
         (error) => {
             if (error) {

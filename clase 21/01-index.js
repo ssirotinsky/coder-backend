@@ -4,7 +4,7 @@ let {Estudiante} = require('./models/estudiantes');
 CRUD();
 
 function CRUD(){
-    const URI = 'mongodb+srv://sergiosiro:123456@cluster0.8vpxz.mongodb.net/myFirstDatabase?retryWrites=true&w=majority';
+    const URI = 'mongodb+srv://sergiosiro:ko7YMDi8zZ2PfNrL@cluster0.8vpxz.mongodb.net/myFirstDatabase?retryWrites=true&w=majority';
     mongoose.connect(URI, 
         { 
           useNewUrlParser: true,
@@ -19,8 +19,8 @@ function CRUD(){
                 console.log('Creando estudiantes...');
                 let estudiantesArray = 
                 [
-                    { nombre: 'Pedro', apellido: 'Mei', edad: 21, dni: '313333398', curso: '1A', nota: 7 },
-                    { nombre: 'Ana', apellido: 'Gonzalez', edad: 32, dni: '27651878', curso: '1A', nota: 8 },
+                    { nombre: 'Pedro', apellido: 'Mei', edad: 21, dni: '313222398', curso: '1A', nota: 7 },
+                    { nombre: 'Ana', apellido: 'Gonzalez', edad: 32, dni: '27222878', curso: '1A', nota: 8 },
                 ];
 
                 // for (estu of estudiantesArray) {

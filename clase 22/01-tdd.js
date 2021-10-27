@@ -7,7 +7,7 @@ function suma(a, b) {
 const assert = require('assert').strict;
      
 try {
-    assert.equal(8, suma(3,6), "Prueba fallida");
+    assert.equal(9, suma(3,6), "Prueba fallida");
     console.log('Prueba OK');
 } catch(error) {
     console.log("Error: ", error)

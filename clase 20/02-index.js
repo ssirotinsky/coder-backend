@@ -42,18 +42,18 @@ function CRUD(){
         console.log('Estudiantes que sacaron 10:');
         console.log(estudiantes);
     })
-    .then(()=>Estudiante.aggregate([ { $match: {nota: {$exists: 1}}} , { $group: { _id: null, promedio: { $avg: '$nota' }}} ]))
-    // .then(()=>Estudiante.aggregate([ { $match: {nota: {$exists: 1}}} ]))
-    .then(notas=>{
-        console.log('Promedio de notas del total:');
-        console.log(notas[0]);
-    })
-    .then(()=>Estudiante.aggregate([ { $match: {curso: '1A'}} , { $group: { _id: null, promedio: { $avg: '$nota' }}} ]))
-    // .then(()=>Estudiante.aggregate([  { $match: {curso: '1A'}}]))
-    .then(notas=>{
-        console.log('Promedio de notas del curso 1A:');
-        console.log(notas[0].promedio);
-    })
+    // .then(()=>Estudiante.aggregate([ { $match: {nota: {$exists: 1}}} , { $group: { _id: null, promedio: { $avg: '$nota' }}} ]))
+    // // .then(()=>Estudiante.aggregate([ { $match: {nota: {$exists: 1}}} ]))
+    // .then(notas=>{
+    //     console.log('Promedio de notas del total:');
+    //     console.log(notas[0]);
+    // })
+    // .then(()=>Estudiante.aggregate([ { $match: {curso: '1A'}} , { $group: { _id: null, promedio: { $avg: '$nota' }}} ]))
+    // // .then(()=>Estudiante.aggregate([  { $match: {curso: '1A'}}]))
+    // .then(notas=>{
+    //     console.log('Promedio de notas del curso 1A:');
+    //     console.log(notas[0].promedio);
+    // })
     .then(()=>mongoose.connection.close())
     .catch(error=>console.log('Error al conectarse a la base de datos', error));       
 }

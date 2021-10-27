@@ -1,5 +1,5 @@
 {
-  "name": "clase-20",
+  "name": "clase-24",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -9,6 +9,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "mongoose": "^6.0.10"
+    "cookie-parser": "^1.4.5",
+    "express": "^4.17.1"
   }
 }

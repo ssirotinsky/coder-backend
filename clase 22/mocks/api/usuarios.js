@@ -1,6 +1,6 @@
 const generador = require('../generador/usuarios');
 const util = require('../util');
-
+ 
 let {usuarios} = require('../model/usuarios');
 
 const generar = (req, res) => {
@@ -30,7 +30,6 @@ const post = (req, res) => {
     let usuario = req.body;
     usuario.id = util.nextId(usuarios);
     usuario.fecha = util.getFecha();
-    console.log(usuarios);
     usuarios.push(usuario);
     res.send(usuario);
 }

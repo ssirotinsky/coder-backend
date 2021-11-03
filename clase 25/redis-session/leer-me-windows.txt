@@ -1,0 +1,3 @@
+para evitar problemas desde node.js, instalar desde aquí redis server:
+
+https://github.com/ServiceStack/redis-windows/raw/master/downloads/redis-latest.zip

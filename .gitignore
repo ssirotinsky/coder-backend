@@ -26,6 +26,11 @@ clase 22/mocks/node_modules
 clase 23/node_modules
 clase 24/node_modules
 clase 24/session/node_modules
+clase 25/node_modules
+clase 25/mongo-session/node_modules
+clase 25/redis-session/node_modules
+clase 26/node_modules
+clase 26/aut-passport/node_modules
 after/sockets/node_modules   
 mongo
 mongo1

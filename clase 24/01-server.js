@@ -4,8 +4,8 @@ const cookieParser = require('cookie-parser');
 const app = express();
 const PORT = 8080;
 
-app.use(cookieParser());
-// app.use(cookieParser('123456'));
+// app.use(cookieParser());
+app.use(cookieParser('123456'));
 
 const server = app.listen(PORT, ()=>{
     console.log('Servidor HTTP escuchando en el puerto', server.address().port);
@@ -18,17 +18,19 @@ app.get('/test', (req,res)=>{
 });
 
 app.get('/set', (req,res)=>{
-    res.cookie('server', 'express').send('Cookie set');
-    // res.cookie('server', 'express',  { signed: true } ).send('Cookie set');
+    // res.cookie('server', 'express').send('Cookie set');
+    res.cookie('server', 'express',  { signed: true } ).send('Cookie set');
 });
 
 app.get('/setEX', (req,res)=>{
-    res.cookie('server2', 'express2',{maxAge: 30000}).send('Cookie setEX');
+    res.cookie('server2', 'express2',{maxAge: 60000}).send('Cookie setEX');
 });
 
 app.get('/get', (req,res)=>{
-    console.log('Unsigned.:', req.cookies);
+    // console.log('Unsigned.:', req.cookies);
+    // console.log('Valor de mi cookie:', req.cookies.server);
     console.log('Signed:', req.signedCookies);
+    console.log('Mi cookie:', req.signedCookies.server);
     res.send({});
 });
 

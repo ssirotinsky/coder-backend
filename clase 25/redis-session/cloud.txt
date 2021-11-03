@@ -1,0 +1,5 @@
+zp2NQTYt9wSNeuwRGPQCySMe6Vl6HiQC
+
+redis-13928.c258.us-east-1-4.ec2.cloud.redislabs.com:13928
+
+redis-cli -h redis-13928.c258.us-east-1-4.ec2.cloud.redislabs.com -p 13928 -a zp2NQTYt9wSNeuwRGPQCySMe6Vl6HiQC

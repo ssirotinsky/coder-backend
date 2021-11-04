@@ -1,50 +1,73 @@
-function getRoute(req, res){
-    res.send('Bienvenido!');
-}
 
 function getLogin(req, res){
-    res.send('Login');
-}
-
-function postLogin(req, res){
     if (req.isAuthenticated()){
         let user = req.user;
         console.log('Usuario logueado');
-        res.send(user);
+        res.json(user);
     } else {
         console.log('Usuario no logueado');
-        res.send('Login ok!');
+        res.redirect('/');
     }
 }
 
-function postFailLogin(req, res){
-    res.send('Error en login');
+function postLogin(req, res){
+    let user = req.user;
+    user.visitas++;
+    res.redirect('/datos');
+}
+
+function getFailLogin(req, res){
+    res.redirect('/error-login.html');
 }
 
 function getSignUp(req, res){
-    res.send('Registro');
+    res.redirect('/register.html');
 }
 
 function postSignUp(req, res){
-    let user = req.user;
-    res.send('Usuario');
+    res.redirect('/datos');
 }
 
-function postFailSignUp(req, res){
-    res.send('Error en Registro');
+function getFailSignUp(req, res){
+    res.redirect('/error-signup.html');
+}
+
+function getLogout(req, res){
+    req.logout();
+    res.redirect('/');
 }
 
 function failRoute(req, res){
     res.status(404).send('Ruta no encontrada');
 }
 
+function getRutaProtegida(req, res){
+    res.send('Pude ingresar a la ruta protegida');
+}
+
+function getDatos(req,res){
+    if (req.isAuthenticated()) {
+        let user = req.user;
+        res.json({
+            id: user._id,
+            usuario: user.username,
+            direccion: user.direccion,
+            visitas: user.visitas
+        });
+    } else {
+        res.redirect('/index.html');
+    }
+}
+
 module.exports = {
-    getRoute,
     getLogin,
     postLogin,
-    postFailLogin,
+    getFailLogin,
     getSignUp,
     postSignUp,
-    postFailSignUp,
+    getFailSignUp,
+    getLogout,
+    getRutaProtegida,
+    getDatos,
     failRoute
 }

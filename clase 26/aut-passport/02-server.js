@@ -3,7 +3,7 @@ const session = require('express-session');
 const passport = require('passport');
 const LocalStrategy = require('passport-local').Strategy;
 const routes = require('./routes'); 
-const {obtenerUsuario, passwordValida} = require('./utils/util');
+const {obtenerUsuario, obtenerUsuarioId, passwordValida} = require('./utils/util');
 
 const app = express();
 const PORT = 8080;
@@ -39,7 +39,9 @@ passport.use('signup', new LocalStrategy({
             let nuevoUsuario = {
                 _id: usuarios.length + 1, 
                 username, 
-                password
+                password,
+                direccion: req.body.direccion,
+                visitas: 1
             }
             usuarios.push(nuevoUsuario);
             console.log(usuarios);
@@ -57,7 +59,7 @@ passport.use('login', new LocalStrategy({
             return done(null, false, console.log(username, 'usuario no existe'));
         } else {
             if (passwordValida(usuario, password)) {
-                return done(null, usuario)
+                return done(null, usuario)  
             } else {
                 return done(null, false, console.log(username, 'password errónea'));
             }
@@ -70,7 +72,7 @@ passport.serializeUser((user, done)=>{
 });
 
 passport.deserializeUser((id, done)=>{
-    let usuario = obtenerUsuario(usuarios, username);
+    let usuario = obtenerUsuarioId(usuarios, id);
     done(null, usuario);
 });
 
@@ -78,14 +80,26 @@ app.get('/test', (req,res)=>{
     res.send('Server levantado...');
 });
 
-app.get('/', routes.getRoute);
 app.get('/login', routes.getLogin);
 app.post('/login', passport.authenticate('login', {failureRedirect: '/faillogin'}), routes.postLogin);
-app.post('/faillogin', routes.postFailLogin);
+app.get('/faillogin', routes.getFailLogin);
 
 app.get('/signup', routes.getSignUp);
 app.post('/signup', passport.authenticate('signup', {failureRedirect: '/failsignup'}), routes.postSignUp);
-app.post('/failsignup', routes.postFailSignUp);
+app.get('/failsignup', routes.getFailSignUp);
+
+app.get('/logout', routes.getLogout);
+
+app.get('/ruta-protegida', checkAuthentication, routes.getRutaProtegida);
+
+app.get('/datos', routes.getDatos);
 
 app.get('*', routes.failRoute);
 
+function checkAuthentication(req, res, next){
+    if (req.isAuthenticated()){
+        next();
+    } else {
+        res.redirect('/');
+    }
+}

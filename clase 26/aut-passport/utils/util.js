@@ -7,11 +7,21 @@ function obtenerUsuario(usuarios, username){
     }
 }
 
+function obtenerUsuarioId(usuarios, id){
+    let indice = usuarios.findIndex(e=>e._id == id);
+    if (indice == -1) {
+        return undefined;
+    } else {
+        return usuarios[indice];
+    }
+}
+
 function passwordValida(usuario, password){
     return usuario.password == password;
 }
 
 module.exports = {
     obtenerUsuario,
+    obtenerUsuarioId,
     passwordValida
 }

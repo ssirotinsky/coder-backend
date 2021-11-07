@@ -42,7 +42,7 @@ function failRoute(req, res){
 }
 
 function getRutaProtegida(req, res){
-    res.send('Pude ingresar a la ruta protegida');
+    res.send('<h1>Pude ingresar a la ruta protegida</h1>');
 }
 
 function getDatos(req,res){

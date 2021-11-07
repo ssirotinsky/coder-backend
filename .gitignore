@@ -31,6 +31,9 @@ clase 25/mongo-session/node_modules
 clase 25/redis-session/node_modules
 clase 26/node_modules
 clase 26/aut-passport/node_modules
+clase 27/facebook/node_modules
+clase 27/twitter/node_modules
+clase 27/jwt/node_modules
 after/sockets/node_modules   
 mongo
 mongo1

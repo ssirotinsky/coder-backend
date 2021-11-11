@@ -33,6 +33,7 @@ app.post('/register', (req,res)=>{
             visitas: 1
         };
         usuarios.push(user);
+        console.log(user);
         res.status(201).json({token: generateToken(user), error: ''});
     }
 });

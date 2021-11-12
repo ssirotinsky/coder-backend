@@ -1,4 +1,5 @@
-process.stdout.write('hola');
+// const util = require('util');
+// process.stdout.write('hola');
 
 // Console.prototype.log = function() {
 //     this._stdout.write(util.format.apply(this, arguments) + '\n');

@@ -4,7 +4,7 @@ const numCPUs = require('os').cpus().length;
 
 if (cluster.isMaster){
     console.log(`Cantidad de CPUs: ${numCPUs}`);
-    console.log(`Master ${process.pid} is running`);
+    console.log(`Master PID ${process.pid} is running`);
     for (let i=0; i<numCPUs; i++){
         cluster.fork();
     }

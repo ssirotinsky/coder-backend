@@ -25,4 +25,4 @@ if (cluster.isMaster){
     app.get('/', (req,res)=>{
         res.send(`Servidor express en ${PORT} - PID ${process.pid} - ${moment().format('DD/MM/YYYY HH:mm')}`);
     });
-}
+} 
